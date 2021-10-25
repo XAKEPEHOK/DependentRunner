@@ -19,9 +19,9 @@ class DependentRunnerCommand extends Command
     private Redis $redis;
     private string $redisKey;
 
-    public function __construct(DependencyConnection $connection)
+    public function __construct(DependencyConnection $connection, string $name = 'dependent:run')
     {
-        parent::__construct('dependent:run');
+        parent::__construct($name);
         $this->redis = $connection->getRedis();
         $this->redisKey = $connection->getRedisKey();
     }
