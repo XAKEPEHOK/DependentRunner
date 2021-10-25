@@ -1,0 +1,16 @@
+{
+    "name": "xakepehok/dependent-runner",
+    "license": "BSD-3-Clause",
+    "description": "Run & restart process by some dependency",
+    "require": {
+        "php": ">=7.4",
+        "ext-redis": "*",
+        "symfony/console": "^5.3",
+        "symfony/process": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "XAKEPEHOK\\DependentRunner\\": "src/"
+        }
+    }
+}
