@@ -73,7 +73,8 @@ class DependentRunnerCommand extends Command
             }
 
             if (!$this->isReady() && $process->isStarted() && !$process->isTerminated()) {
-                $process->stop();
+                $process->stop(1);
+                $process->wait();
                 $output->writeln('<error>Process terminated and will be restarted by dependency</error>');
                 $output->write('Restarting...');
             }
