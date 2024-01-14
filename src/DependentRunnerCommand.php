@@ -26,7 +26,7 @@ class DependentRunnerCommand extends Command
         $this->redisKey = $connection->getRedisKey();
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $command = $input->getArgument('cmd');
         $isSingle = $input->getArgument('single');
